@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    keycloak:
+        image: quay.io/keycloak/keycloak:19.0.1
+        command: [ 'start-dev' ]
+#        volumes:
+#            - ./realm-config:/opt/keycloak/data/import
+networks:
+    security:
+volumes:
+    keycloak-storage:
